@@ -7,16 +7,14 @@
         <link rel="stylesheet" href="style.css" />
         <title>Kill Inset</title>
     </head>
-    <body>
+    <body onresize="adjustScreenSize()">
         <div class="painel">
             <div class="lifes">
-                <img src="images/coracao_vazio.png" alt="coracaoVazio">
-                <img src="images/coracao_cheio.png" alt="coracao_cheio">
-                <img src="images/coracao_cheio.png" alt="coracao_cheio">
+                <img id="v1" src="images/coracao_cheio.png" >
+                <img id="v2" src="images/coracao_cheio.png" >
+                <img id="v3" src="images/coracao_cheio.png" >
             </div>
-            <div class="stopwatch">
-                <p>Tempo restante: ?</p>
-            </div>
+            <div class="stopwatch">Tempo restante: ?</div>
         </div>
     </body>
     <script src="main.js"></script>
