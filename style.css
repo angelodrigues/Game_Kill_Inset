@@ -1,4 +1,51 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+}
+
 .inset1 {
     width: 3.125rem;
     height: 3.125rem;
+}
+.inset2 {
+    width: 4.375rem;
+    height: 4.375rem;
+}
+.inset3 {
+    width: 5.625rem;
+    height: 5.625rem;
+}
+
+.sideA {
+    transform: scaleX(1);
+}
+
+.sideB {
+    transform: scaleX(-1);
+}
+
+.painel {
+    position: absolute;
+    width: 11.875rem ;
+    padding: 0.625rem;
+    bottom: 0rem;
+    border-top: solid 0.0625rem #fff;
+    background-color: #fff;
+
+}
+
+.lifes {
+    float: left;
+}
+
+.stopwatch {
+    float: left;
+    font-size: 1.25rem;
+    font-weight: bold;
 }

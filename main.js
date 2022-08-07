@@ -1,7 +1,8 @@
-var height = 0;
-var width = 0;
-
 function adjustScreenSize() {
+
+    if(document.getElementById('inset')) {
+        document.getElementById('inset').remove();
+    }
 
     var height = window.innerHeight;
     var width = window.innerWidth;
@@ -21,17 +22,47 @@ function adjustScreenSize() {
         //create the html element
         var inset = document.createElement('img');
         inset.src = 'images/mosca.png';
-        inset.className = 'inset1'
+        inset.className = randomSize() + ' ' + randomSide();
         inset.style.left = positionX + 'px';
         inset.style.top = positionY + 'px';
         inset.style.position = 'absolute';
+        inset.id = 'inset';
     
         document.body.appendChild(inset);
+
+
+        
     }
 
     randomPosition();
-    
+
+    function randomSize() {
+        var classe = Math.floor(Math.random() * 3);
+        
+        switch(classe) {
+            case 0:
+                return 'inset1'
+            case 1:
+                return 'inset2'
+            case 2:
+                return 'inset3'
+        } 
+    }
+
+    function randomSide() {
+        var classe = Math.floor(Math.random() * 2);
+
+        switch(classe) {
+            case 0:
+                return 'sideA';
+            case 1: 
+                return 'sideB';    
+        }
+    }
 }
 
-adjustScreenSize();
+setInterval(function(){
+    adjustScreenSize();
+}, 1000)
+
 
