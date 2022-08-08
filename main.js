@@ -1,14 +1,25 @@
 var lifes = 1;
+var time = 6;
 
 function adjustScreenSize() {
 
     
     var height = window.innerHeight;
     var width = window.innerWidth;
+    var stopWatch = setInterval(function(){
 
+        time -= 1;
+    
+        if(time < 0){
+            clearInterval(stopWatch);
+            clearInterval(createInset);
+            window.document.href = 'win.html';
+        } else {
+            document.getElementById('watch').innerHTML = time;
+        }
+    }, 1000);
 
     function randomPosition() {
-
 
         if(document.getElementById('inset')) {
             document.getElementById('inset').remove();
@@ -71,8 +82,6 @@ function adjustScreenSize() {
     }
 }
 
-setInterval(function(){
+var createInset = setInterval(function(){
     adjustScreenSize();
-}, 2000 )
-
-
+}, 3000 );

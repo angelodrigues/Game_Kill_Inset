@@ -14,8 +14,10 @@
                 <img id="v2" src="images/coracao_cheio.png" >
                 <img id="v3" src="images/coracao_cheio.png" >
             </div>
-            <div class="stopwatch">Tempo restante: ?</div>
+            <div class="stopwatch">Time Left: <span id="watch"></span></div>
         </div>
     </body>
-    <script src="main.js"></script>
+    <script src="main.js">
+        document.getElementById('watch').innerHTML = time;
+    </script>
 </html>
