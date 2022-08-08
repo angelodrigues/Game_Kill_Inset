@@ -13,7 +13,7 @@ function adjustScreenSize() {
         if(document.getElementById('inset')) {
             document.getElementById('inset').remove();
             if(lifes > 3) {
-                alert('Interromper o jogo (Game Over)')
+                window.location.href = 'end_game.html'
             } else {
                 document.getElementById('v' + lifes).src = "images/coracao_vazio.png";
     
