@@ -11,9 +11,9 @@ function adjustScreenSize() {
         time -= 1;
     
         if(time < 0){
+            window.location.href = 'win.html';
             clearInterval(stopWatch);
             clearInterval(createInset);
-            window.document.href = 'win.html';
         } else {
             document.getElementById('watch').innerHTML = time;
         }
@@ -84,4 +84,4 @@ function adjustScreenSize() {
 
 var createInset = setInterval(function(){
     adjustScreenSize();
-}, 3000 );
+}, 2000 );
