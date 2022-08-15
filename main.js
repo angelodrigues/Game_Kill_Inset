@@ -1,9 +1,23 @@
 var lifes = 1;
-var time = 6;
+var time = 0;
+var nivel = window.location.search;
+nivel = nivel.replace('?', '');
+var creationTimeOfTheInsects = 1500;
+
+if(nivel === 'normal') {
+    creationTimeOfTheInsects = 1500;
+    time = 60;
+} else if(nivel === 'medium') {
+    creationTimeOfTheInsects = 1000;
+    time = 120;
+} else if(nivel === 'hard') {   
+    creationTimeOfTheInsects = 750;
+    time = 150;
+}
 
 function adjustScreenSize() {
 
-    
+
     var height = window.innerHeight;
     var width = window.innerWidth;
     var stopWatch = setInterval(function(){
@@ -84,4 +98,4 @@ function adjustScreenSize() {
 
 var createInset = setInterval(function(){
     adjustScreenSize();
-}, 2000 );
+}, creationTimeOfTheInsects );

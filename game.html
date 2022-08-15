@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Kill Inset</title>
+    </head>
+    <body onresize="adjustScreenSize()">
+        <div class="painel">
+            <div class="lifes">
+                <img id="v1" src="images/coracao_cheio.png" />
+                <img id="v2" src="images/coracao_cheio.png" />
+                <img id="v3" src="images/coracao_cheio.png" />
+            </div>
+            <div class="stopwatch">Time Left: <span id="watch"></span></div>
+        </div>
+    </body>
+    <script src="main.js">
+        document.getElementById('watch').innerHTML = time;
+    </script>
+</html>
